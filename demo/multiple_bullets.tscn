@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=3 uid="uid://e7fsb84ol82p"]
+
+[ext_resource type="PackedScene" uid="uid://c6n5vpwk1tlxe" path="res://scenes/bullet.tscn" id="1_64vl6"]
+[ext_resource type="Texture2D" uid="uid://b28p6v71ida5w" path="res://spritesheet.sprites/01.tres" id="2_ga8oe"]
+[ext_resource type="Texture2D" uid="uid://boncnh5wna6mn" path="res://spritesheet.sprites/02.tres" id="3_6n67r"]
+[ext_resource type="Texture2D" uid="uid://bbpec2m2n0vhb" path="res://spritesheet.sprites/03.tres" id="4_a6uug"]
+[ext_resource type="Texture2D" uid="uid://bptubs8ocogg4" path="res://spritesheet.sprites/04.tres" id="5_w70if"]
+[ext_resource type="Texture2D" uid="uid://ulnapbrvwk3i" path="res://spritesheet.sprites/05.tres" id="6_5r0ot"]
+[ext_resource type="Texture2D" uid="uid://dj44fg00n7ls2" path="res://spritesheet.sprites/44.tres" id="7_5eufi"]
+[ext_resource type="Texture2D" uid="uid://bv8j6rtyipcd6" path="res://spritesheet.sprites/63.tres" id="8_6a13r"]
+[ext_resource type="PackedScene" uid="uid://d2cuubix0ovxu" path="res://scenes/bullet_configured.tscn" id="9_s4wyn"]
+[ext_resource type="PackedScene" uid="uid://cx6w7dj7uk6j0" path="res://scenes/bullet_from_resource.tscn" id="10_tc5bx"]
+
+[node name="MultipleBullets" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 10.0
+offset_top = -1.0
+offset_right = 633.0
+offset_bottom = 22.0
+text = "Можно использовать tool если нужно визуальное отображение в редакторе"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 373.0
+offset_top = 318.0
+offset_right = 996.0
+offset_bottom = 341.0
+text = "Просто сконфигурированные на месте сцены"
+
+[node name="Bullet" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(115, 370)
+texture = ExtResource("2_ga8oe")
+speed = 90
+
+[node name="Bullet2" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(262, 408)
+texture = ExtResource("3_6n67r")
+speed = 220
+
+[node name="Bullet3" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(33, 402)
+texture = ExtResource("4_a6uug")
+speed = 150
+
+[node name="Bullet4" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(233, 329)
+texture = ExtResource("5_w70if")
+speed = 90
+
+[node name="Bullet5" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(72, 269)
+texture = ExtResource("6_5r0ot")
+speed = 400
+
+[node name="Bullet6" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(291, 356)
+texture = ExtResource("7_5eufi")
+speed = 60
+
+[node name="Bullet7" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(182, 423)
+texture = ExtResource("8_6a13r")
+
+[node name="Bullet8" parent="." instance=ExtResource("1_64vl6")]
+position = Vector2(436, 289)
+texture = ExtResource("4_a6uug")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 10.0
+offset_top = 46.0
+offset_right = 633.0
+offset_bottom = 121.0
+text = "Заранее сконфигурированные пули.
+Можно создавать унаследовавшись от основной сцены. 
+Сцена -> новая унаследованная сцена
+Либо использовать кастомный ресурс со всеми необходимыми параметрами"
+
+[node name="Bullet9" parent="." instance=ExtResource("9_s4wyn")]
+position = Vector2(538, 148)
+
+[node name="Bullet10" parent="." instance=ExtResource("9_s4wyn")]
+position = Vector2(530, 165)
+
+[node name="Bullet11" parent="." instance=ExtResource("9_s4wyn")]
+position = Vector2(520, 180)
+
+[node name="Bullet12" parent="." instance=ExtResource("9_s4wyn")]
+position = Vector2(512, 193)
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 457.0
+offset_right = 1315.0
+offset_bottom = 558.0
+text = "Пуля полностью сконфигурированная из ресурса
+такой вариант может пригодится если нужно собрать 
+все данные сущности в одном месте и использовать эти данные для конфигурации разных объектов. 
+Например элемент экипировки, в одном ресурсе можно держать даные о иконке, статах, цене в магазе и тд"
+
+[node name="Bullet13" parent="." instance=ExtResource("10_tc5bx")]
+position = Vector2(100, 592)

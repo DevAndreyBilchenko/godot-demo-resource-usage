@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://cx6w7dj7uk6j0"]
+
+[ext_resource type="Script" path="res://scenes/bullet_from_resource.gd" id="1_joy46"]
+[ext_resource type="Script" path="res://bullet_conf.gd" id="2_82gdq"]
+[ext_resource type="Texture2D" uid="uid://dj44fg00n7ls2" path="res://spritesheet.sprites/44.tres" id="3_0gtej"]
+
+[sub_resource type="Resource" id="Resource_v63j3"]
+script = ExtResource("2_82gdq")
+texture = ExtResource("3_0gtej")
+speed = 90
+
+[node name="Bullet" type="Node2D"]
+script = ExtResource("1_joy46")
+configuraton = SubResource("Resource_v63j3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

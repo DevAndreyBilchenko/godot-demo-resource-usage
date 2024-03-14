@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2cuubix0ovxu"]
+
+[ext_resource type="PackedScene" uid="uid://c6n5vpwk1tlxe" path="res://scenes/bullet.tscn" id="1_ytii3"]
+[ext_resource type="Texture2D" uid="uid://bptubs8ocogg4" path="res://spritesheet.sprites/04.tres" id="2_1n4cr"]
+
+[node name="Bullet" instance=ExtResource("1_ytii3")]
+texture = ExtResource("2_1n4cr")
+speed = -70
