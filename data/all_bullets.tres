@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BulletStats" load_steps=7 format=3 uid="uid://bm7ia33l7k0te"]
+
+[ext_resource type="Resource" uid="uid://d336g1oe6eqg2" path="res://data/bullet_conf_1.tres" id="1_13djs"]
+[ext_resource type="Script" path="res://bullet_stats.gd" id="1_hjee4"]
+[ext_resource type="Resource" uid="uid://bqa84x1fvhrf" path="res://data/bullet_conf_2.tres" id="2_8a3dv"]
+[ext_resource type="Resource" uid="uid://cwj3agca7y4qk" path="res://data/bullet_conf_3.tres" id="3_co6t2"]
+[ext_resource type="Resource" uid="uid://dv2g7w7efrahi" path="res://data/bullet_conf_4.tres" id="4_brw7r"]
+[ext_resource type="Resource" uid="uid://c1csrvt4wqdup" path="res://data/bullet_conf_5.tres" id="5_0qv73"]
+
+[resource]
+script = ExtResource("1_hjee4")
+collection = Array[Resource("res://bullet_conf.gd")]([ExtResource("1_13djs"), ExtResource("2_8a3dv"), ExtResource("3_co6t2"), ExtResource("4_brw7r"), ExtResource("5_0qv73")])

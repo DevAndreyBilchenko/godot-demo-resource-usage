@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://e7fsb84ol82p"]
+[gd_scene load_steps=13 format=3 uid="uid://e7fsb84ol82p"]
 
 [ext_resource type="PackedScene" uid="uid://c6n5vpwk1tlxe" path="res://scenes/bullet.tscn" id="1_64vl6"]
 [ext_resource type="Texture2D" uid="uid://b28p6v71ida5w" path="res://spritesheet.sprites/01.tres" id="2_ga8oe"]
@@ -10,6 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://bv8j6rtyipcd6" path="res://spritesheet.sprites/63.tres" id="8_6a13r"]
 [ext_resource type="PackedScene" uid="uid://d2cuubix0ovxu" path="res://scenes/bullet_configured.tscn" id="9_s4wyn"]
 [ext_resource type="PackedScene" uid="uid://cx6w7dj7uk6j0" path="res://scenes/bullet_from_resource.tscn" id="10_tc5bx"]
+[ext_resource type="Script" path="res://bullet_conf.gd" id="11_62t30"]
+
+[sub_resource type="Resource" id="Resource_0yisd"]
+script = ExtResource("11_62t30")
+texture = ExtResource("2_ga8oe")
+speed = 90
 
 [node name="MultipleBullets" type="Node2D"]
 
@@ -99,3 +105,7 @@ text = "Пуля полностью сконфигурированная из р
 
 [node name="Bullet13" parent="." instance=ExtResource("10_tc5bx")]
 position = Vector2(100, 592)
+
+[node name="Bullet14" parent="." instance=ExtResource("10_tc5bx")]
+position = Vector2(100, 592)
+configuraton = SubResource("Resource_0yisd")

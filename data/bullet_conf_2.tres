@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BulletConf" load_steps=3 format=3 uid="uid://bqa84x1fvhrf"]
+
+[ext_resource type="Script" path="res://bullet_conf.gd" id="1_m80pw"]
+[ext_resource type="Texture2D" uid="uid://boncnh5wna6mn" path="res://spritesheet.sprites/02.tres" id="2_xil0q"]
+
+[resource]
+script = ExtResource("1_m80pw")
+texture = ExtResource("2_xil0q")
+speed = 320

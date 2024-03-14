@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cnjp6ow3iu0nd"]
+
+[ext_resource type="Resource" uid="uid://bm7ia33l7k0te" path="res://data/all_bullets.tres" id="1_v3nea"]
+
+[sub_resource type="GDScript" id="GDScript_m51hh"]
+script/source = "extends Node2D
+
+@export var bullet_stats: BulletStats
+
+func _ready():
+	print(\"Средняя скорость: \", bullet_stats.get_average_speed())
+"
+
+[node name="ResourceWithArray" type="Node2D"]
+script = SubResource("GDScript_m51hh")
+bullet_stats = ExtResource("1_v3nea")
